@@ -1,4 +1,4 @@
-# Chitchatter
+# ne1up?
 
 ![Chitchatter logo](./public/logo/logo.svg)
 
