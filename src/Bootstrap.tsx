@@ -75,8 +75,8 @@ const getConfigFromSdk = () => {
 
 const Bootstrap = ({
   persistedStorage: persistedStorageProp = localforage.createInstance({
-    name: 'chitchatter',
-    description: 'Persisted settings data for chitchatter',
+    name: 'ne1up',
+    description: 'Persisted settings data for ne1up',
   }),
   initialUserSettings,
   serializationService = serialization,
@@ -144,7 +144,7 @@ const Bootstrap = ({
             }
           } catch (e) {
             console.error(
-              'Chitchatter configuration from parent frame could not be loaded'
+              'ne1up configuration from parent frame could not be loaded'
             )
           }
         }
