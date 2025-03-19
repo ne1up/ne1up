@@ -452,10 +452,10 @@ export const Shell = ({ appNeedsUpdate, children, userPeerId }: ShellProps) => {
                   >
                     This conversation is powered by{' '}
                     <Link
-                      href="https://github.com/jeremyckahn/chitchatter"
+                      href="https://github.com/isne1up/ne1up"
                       target="_blank"
                     >
-                      Chitchatter
+                      ne1up
                     </Link>
                   </Typography>
                 ) : null}
