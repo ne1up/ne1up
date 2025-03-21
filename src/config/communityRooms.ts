@@ -5,6 +5,6 @@ export const communityRoomNames = [
   'leaks',
   'news',
   'organize',
-  'politics',
+  'parrotOS',
   'resist',
 ]
