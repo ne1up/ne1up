@@ -47,7 +47,7 @@ Open <https://ne1up.com/> and join a room to start chatting with anyone else who
 ## Anti-features
 
 - Messages are never persisted to disk. When you leave a peer room, messages are cleared from memory and cannot be retrieved.
-- ne1up is an entirely client-side communication app. It uses public WebTorrent servers to establish peer connections and STUN/TURN relay servers when direct peer-to-peer connections cannot be established, but there is no Chitchatter API server.
+- ne1up is an entirely client-side communication app. It uses public WebTorrent servers to establish peer connections and STUN/TURN relay servers when direct peer-to-peer connections cannot be established, but there is no ne1up API server.
 - No analytics, tracking, or telemetry of any kind.
 - This is a community-driven and unfunded project that makes no money. The users come first and there is no corporate influence or financial interest involved.
 
@@ -55,7 +55,7 @@ Open <https://ne1up.com/> and join a room to start chatting with anyone else who
 
 There is no shortage of user-friendly chat apps available, but they rely on a central service to facilitate communication. It is difficult to trust these central services, as commercial interests and [government pressure](https://www.npr.org/2022/08/12/1117092169/nebraska-cops-used-facebook-messages-to-investigate-an-alleged-illegal-abortion) can compel service operators to work against the best interest of the users. Even when user data is handled in good faith by service operators, the possibility remains that [encrypted data held at rest may be decrypted](https://www.cbsnews.com/news/fbi-may-have-found-way-to-unlock-san-bernardino-shooters-iphone/) against the user's will.
 
-ne1up designs around these risks with a [web mesh architecture](https://dev.to/jeremyckahn/taking-the-power-back-with-web-meshes-omg). There is no central service operator that stores or potentially mishandles communication data. Some services are required to establish an initial connection between peers, but otherwise the app uses direct peer-to-peer communication for everything. Any services that are used by Chitchatter have no association with the project and are publicly available for all to use.
+ne1up designs around these risks with a [web mesh architecture](https://dev.to/jeremyckahn/taking-the-power-back-with-web-meshes-omg). There is no central service operator that stores or potentially mishandles communication data. Some services are required to establish an initial connection between peers, but otherwise the app uses direct peer-to-peer communication for everything. Any services that are used by ne1up have no association with the project and are publicly available for all to use.
 
 ## Use cases
 
@@ -81,7 +81,7 @@ If you don't agree with the direction of the project, you are welcome to fork ne
 
 ### 🏗️ Support and custom development
 
-Paid installations and customizations of ne1up or the original Chitchatter for your needs. If you'd like to contract me to make a version that is custom built for you, please email me at <isne1up@gmail.com> and let me know what you have in mind to get started.
+Paid installations and customizations of ne1up or the original Chitchatter for your needs. If you'd like to contract us to make a version that is custom built for you, please email me at <isne1up@gmail.com> and let me know what you have in mind to get started.
 
 ---
 
@@ -241,7 +241,7 @@ This could happen for a variety of reasons. The most likely of which is that one
 
 ##### Issues specific to browsers with ad blocking extensions
 
-Some ad blockers (such as uBlock Origin) prevent connections to certain WebTorrent servers. This prevents ne1up peers from connecting. To work around this, you can either disable your ad blocker or [self-host your own Chitchatter instance](#self-hosting).
+Some ad blockers (such as uBlock Origin) prevent connections to certain WebTorrent servers. This prevents ne1up peers from connecting. To work around this, you can either disable your ad blocker or [self-host your own ne1up instance](#self-hosting).
 
 ##### Issues specific to iOS Safari
 
@@ -265,4 +265,4 @@ ne1up uses [StreamSaver.js](https://github.com/jimmywarting/StreamSaver.js) to f
 
 ## ⚠️ [Disclaimer](https://ne1up.com/disclaimer)
 
-By using ne1up, you agree to accept **full responsibility** for your actions related to its use. Additionally, you agree **not** to hold any contributors to the Chitchatter project responsible for any result of your use of it. The developers of ne1up do not endorse illegal activity.
+By using ne1up, you agree to accept **full responsibility** for your actions related to its use. Additionally, you agree **not** to hold any contributors to the ne1up project responsible for any result of your use of it. The developers of ne1up do not endorse illegal activity.
