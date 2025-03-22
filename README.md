@@ -1,10 +1,9 @@
-# ne1up?
+# ...anyone up?
 
-![Chitchatter logo](./public/logo/logo.svg)
+![ne1up logo](./public/logo/logo.svg)
 
-<sub>Logo provided by [@ramyashreeshetty](https://github.com/ramyashreeshetty)</sub>
 
-Chitchatter is a free (as in both price and freedom) communication tool. Designed to be the simplest way to connect with others privately and securely, it is:
+ne1up is a free (as in both price and freedom) communication tool. Designed to be the simplest way to connect with others privately and securely, it is:
 
 - Fully open source (licensed under [GPL v2](./LICENSE))
 - Peer-to-peer
@@ -13,11 +12,11 @@ Chitchatter is a free (as in both price and freedom) communication tool. Designe
 - Ephemeral
   - Message content is never persisted to disk on either the client or server
 - Decentralized
-  - There is no API server. All that's required for Chitchatter to function is availability of GitHub for static assets, and public WebTorrent and STUN/TURN relay servers for establishing peer-to-peer communication.
+  - There is no API server. All that's required for ne1up to function is availability of GitHub for static assets, and public WebTorrent and STUN/TURN relay servers for establishing peer-to-peer communication.
 - Embeddable
 - [Self-hostable](#self-hosting)
 
-Chitchatter uses [Vite](https://vitejs.dev/). The secure networking and streaming magic would not be possible without [Trystero](https://github.com/dmotz/trystero). File transfer functionality is powered by [`secure-file-transfer`](https://github.com/jeremyckahn/secure-file-transfer).
+ne1up uses [Vite](https://vitejs.dev/). The secure networking and streaming magic would not be possible without [Trystero](https://github.com/dmotz/trystero). File transfer functionality is powered by [`secure-file-transfer`](https://github.com/jeremyckahn/secure-file-transfer).
 
 ## Status
 
@@ -25,7 +24,7 @@ Chitchatter uses [Vite](https://vitejs.dev/). The secure networking and streamin
 
 ## How to use it
 
-Open <https://chitchatter.im/> and join a room to start chatting with anyone else who is in the room. By default, room names are random [UUID](https://en.wikipedia.org/wiki/Universally_unique_identifier)s that are generated client-side. To privately communicate with someone, it is recommended to join one of these randomly-generated rooms and share the URL (via the "🔗" button at the top of the page) to whomever you wish to communicate with via a secure medium of your choosing (such as [Burner Note](https://burnernote.com/) or [Yopass](https://yopass.se/)). Your user name will be presented to you, and it would be good to share that with who you will be chatting with beforehand so they know they're talking to you.
+Open <https://ne1up.com/> and join a room to start chatting with anyone else who is in the room. By default, room names are random [UUID](https://en.wikipedia.org/wiki/Universally_unique_identifier)s that are generated client-side. To privately communicate with someone, it is recommended to join one of these randomly-generated rooms and share the URL (via the "🔗" button at the top of the page) to whomever you wish to communicate with via a secure medium of your choosing (such as [Burner Note](https://burnernote.com/) or [Yopass](https://yopass.se/)). Your user name will be presented to you, and it would be good to share that with who you will be chatting with beforehand so they know they're talking to you.
 
 ## Features
 
@@ -48,7 +47,7 @@ Open <https://chitchatter.im/> and join a room to start chatting with anyone els
 ## Anti-features
 
 - Messages are never persisted to disk. When you leave a peer room, messages are cleared from memory and cannot be retrieved.
-- Chitchatter is an entirely client-side communication app. It uses public WebTorrent servers to establish peer connections and STUN/TURN relay servers when direct peer-to-peer connections cannot be established, but there is no Chitchatter API server.
+- ne1up is an entirely client-side communication app. It uses public WebTorrent servers to establish peer connections and STUN/TURN relay servers when direct peer-to-peer connections cannot be established, but there is no Chitchatter API server.
 - No analytics, tracking, or telemetry of any kind.
 - This is a community-driven and unfunded project that makes no money. The users come first and there is no corporate influence or financial interest involved.
 
@@ -56,11 +55,11 @@ Open <https://chitchatter.im/> and join a room to start chatting with anyone els
 
 There is no shortage of user-friendly chat apps available, but they rely on a central service to facilitate communication. It is difficult to trust these central services, as commercial interests and [government pressure](https://www.npr.org/2022/08/12/1117092169/nebraska-cops-used-facebook-messages-to-investigate-an-alleged-illegal-abortion) can compel service operators to work against the best interest of the users. Even when user data is handled in good faith by service operators, the possibility remains that [encrypted data held at rest may be decrypted](https://www.cbsnews.com/news/fbi-may-have-found-way-to-unlock-san-bernardino-shooters-iphone/) against the user's will.
 
-Chitchatter designs around these risks with a [web mesh architecture](https://dev.to/jeremyckahn/taking-the-power-back-with-web-meshes-omg). There is no central service operator that stores or potentially mishandles communication data. Some services are required to establish an initial connection between peers, but otherwise the app uses direct peer-to-peer communication for everything. Any services that are used by Chitchatter have no association with the project and are publicly available for all to use.
+ne1up designs around these risks with a [web mesh architecture](https://dev.to/jeremyckahn/taking-the-power-back-with-web-meshes-omg). There is no central service operator that stores or potentially mishandles communication data. Some services are required to establish an initial connection between peers, but otherwise the app uses direct peer-to-peer communication for everything. Any services that are used by Chitchatter have no association with the project and are publicly available for all to use.
 
 ## Use cases
 
-Chitchatter offers a private and secure solution for:
+ne1up offers a private and secure solution for:
 
 - Organizing groups of people, such as unions or political movements
 - Conveniently moving text or data from one device to another
@@ -72,34 +71,30 @@ Chitchatter offers a private and secure solution for:
 
 ---
 
-## Note from the developer
+## Note from the dev
 
 ### 💻️ Project status
 
-I consider Chitchatter feature-complete inasmuch it does all the things I personally need it to do. I don't have specific plans to add significant functionality in the future, but I may do so if it seems fun to me at the time. **I am committed to fixing any significant bugs** that are reported, so please [open an issue](https://github.com/jeremyckahn/chitchatter/issues/new) if you discover one! Aside from that, Chitchatter is effectively in maintenance mode for the foreseeable future.
-
 If you would like a feature to be implemented and are willing to pay a development cost to ensure it gets done, please file a GitHub issue describing the feature and indicate that you are willing to compensate for the work. If you are not willing to pay, please open a GitHub issue regardless. I may implement it if it seems fun to do so, but other members of the community may also step up to implement it via Pull Requests.
 
-I will always make time support Pull Requests from others. If you're willing to put in the work to improve Chitchatter, I am willing to help shepherd that work along and get it shipped.
-
-If you don't agree with the direction of the project, you are welcome to fork Chitchatter and take it in another one.
+If you don't agree with the direction of the project, you are welcome to fork ne1up and take it in another one.
 
 ### 🏗️ Support and custom development
 
-I'm willing to do paid installations and customizations of Chitchatter for your needs. If you'd like to contract me to make a version of Chitchatter that is custom built for you, please email me at <me@jeremyckahn.com> and let me know what you have in mind to get started.
+Paid installations and customizations of ne1up or the original Chitchatter for your needs. If you'd like to contract me to make a version that is custom built for you, please email me at <isne1up@gmail.com> and let me know what you have in mind to get started.
 
 ---
 
 ## Veracity
 
-The core of Chitchatter's security model is the fact that it is fully open source. You are free (and encouraged) to fully audit the project source code and infrastructure. Not only is the source code available under the terms of the [GPL](./LICENSE), but [all build logs are publicly accessible](https://github.com/jeremyckahn/chitchatter/actions/workflows/pages/pages-build-deployment) as well.
+The core of ne1up's security model is the fact that it is fully open source. You are free (and encouraged) to fully audit the project source code and infrastructure. Not only is the source code available under the terms of the [GPL](./LICENSE), but [all build logs are publicly accessible](https://github.com/isne1up/ne1up/actions/workflows/pages/pages-build-deployment) as well.
 
-If you would like to verify that the app hosted at <https://chitchatter.im/> is the one that is hosted on GitHub, you can use `dig`:
+If you would like to verify that the app hosted at <https://ne1up.com/> is the one that is hosted on GitHub, you can use `dig`:
 
 ```
-$ dig chitchatter.im
+$ dig ne1up.com
 
-; <<>> DiG 9.18.1-1ubuntu1.1-Ubuntu <<>> chitchatter.im
+; <<>> DiG 9.18.1-1ubuntu1.1-Ubuntu <<>> ne1up.com
 ;; global options: +cmd
 ;; Got answer:
 ;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 61332
