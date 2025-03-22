@@ -103,7 +103,7 @@ $ dig ne1up.com
 ;; OPT PSEUDOSECTION:
 ; EDNS: version: 0, flags:; udp: 65494
 ;; QUESTION SECTION:
-;chitchatter.im.                        IN      A
+;ne1up.com.                        IN      A
 
 ;; ANSWER SECTION:
 chitchatter.im.         231     IN      CNAME   jeremyckahn.github.io.
@@ -121,26 +121,24 @@ See the full ticket backlog [here](https://github.com/users/jeremyckahn/projects
 
 ## Environments
 
-- Production environment: <https://chitchatter.im/>
-  - Mirror: <https://chitchatter.vercel.app/> (note that peers cannot connect across domains)
-- Staging: <https://chitchatter-git-develop-jeremyckahn.vercel.app/>
+- Production environment: <https://ne1up.com/>
 
 ## SDK
 
-You can use the official Chitchatter SDK to embed the app as a [Web Component](https://developer.mozilla.org/en-US/docs/Web/API/Web_components) called `<chat-room />`.
+You can use the official ne1up SDK to embed the app as a [Web Component](https://developer.mozilla.org/en-US/docs/Web/API/Web_components) called `<chat-room />`.
 
 ```html
-<script src="https://chitchatter.im/sdk.js"></script>
+<script src="https://ne1up.com/sdk.js"></script>
 
 <chat-room />
 ```
 
 The `<chat-room />` component supports the following optional attributes:
 
-- `room`: The name of the Chitchatter room the user should join. The default value is the URL of the embedding page.
+- `room`: The name of the ne1up room the user should join. The default value is the URL of the embedding page.
 - `user-name`: The friendly name of the user (which they can change).
 - `user-id`: The static ID of the user. The default value is a random UUID.
-- `root-url`: The URL of the Chitchatter instance to use. The default value is `https://chitchatter.im/`.
+- `root-url`: The URL of the ne1up instance to use. The default value is `https://ne1up.com/`.
 - `color-mode`: `light` or `dark`. The default value is `dark`.
 - `play-message-sound`: Whether or not to play a sound when a user receives a message while the window is not in focus. The default value is `false`.
 
@@ -152,12 +150,12 @@ As well as the following [standard `<iframe />` attributes](https://developer.mo
 - `referrerpolicy`
 - `sandbox`
 
-## Developing Chitchatter
+## Developing ne1up
 
 > [!IMPORTANT]
-> Presently Chitchatter can only be developed on \*NIX systems such as Linux and macOS. If you are using Windows, you can use [WSL](https://learn.microsoft.com/en-us/windows/wsl/install) to set up a Linux environment.
+> Presently ne1up can only be developed on \*NIX systems such as Linux and macOS. If you are using Windows, you can use [WSL](https://learn.microsoft.com/en-us/windows/wsl/install) to set up a Linux environment.
 
-To make changes to Chitchatter, clone the source code from GitHub. Ensure you have [Node and NPM](https://nodejs.org) installed. Then in the project directory, run:
+To make changes to ne1up, clone the source code from GitHub. Ensure you have [Node and NPM](https://nodejs.org) installed. Then in the project directory, run:
 
 ```
 npm install
@@ -191,23 +189,23 @@ The build is minified and the filenames include the hashes.
 
 ### Self-hosting
 
-Chitchatter is designed to be forked and self-hosted. If you would like to change pairing or relay server configuration or you prefer to control your own builds and versions, [fork this repo](https://github.com/jeremyckahn/chitchatter/fork) and follow the steps below.
+ne1up is designed to be forked and self-hosted. If you would like to change pairing or relay server configuration or you prefer to control your own builds and versions, [fork this repo](https://github.com/isne1up/ne1up/fork) and follow the steps below.
 
 > [!IMPORTANT]
-> Chitchatter peer connections are bound to the instance's domain. So, a user of Chitchatter at <https://chitchatter.im/> would not be able to connect to a user of a Chitchatter instance on another domain (such as a personal GitHub Pages-hosted fork).
+> ne1up peer connections are bound to the instance's domain. So, a user of ne1up at <https://ne1up.com/> would not be able to connect to a user of a ne1up instance on another domain (such as a personal GitHub Pages-hosted fork).
 
 #### Necessary steps after forking
 
-Assuming you are hosting Chitchatter on [GitHub Pages](https://pages.github.com/):
+Assuming you are hosting ne1up on [GitHub Pages](https://pages.github.com/):
 
-1. Change the [`homepage` property in `package.json`](https://github.com/jeremyckahn/chitchatter/blob/1ea67e2c3a45115e054ebfe3457f2c3572c6213b/package.json#L4) to whatever URL your Chitchatter instance will be hosted from. This will be something like `https://github_user_or_org_name.github.io/chitchatter/`.
+1. Change the [`homepage` property in `package.json`](https://github.com/jeremyckahn/chitchatter/blob/1ea67e2c3a45115e054ebfe3457f2c3572c6213b/package.json#L4) to whatever URL your ne1up instance will be hosted from. This will be something like `https://github_user_or_org_name.github.io/ne1up/`.
 2. Define a [`DEPLOY_KEY` GitHub Action secret](https://github.com/jeremyckahn/chitchatter/blob/e2bac732cf1288f7b5d0bec151098f18e8b1d0d6/.github/workflows/deploy.yml#L28-L31) (at `https://github.com/github_user_or_org_name/chitchatter/settings/secrets/actions`). See the docs for [`peaceiris/actions-gh-pages`](https://github.com/peaceiris/actions-gh-pages#%EF%B8%8F-set-ssh-private-key-deploy_key) for more information.
 3. If you're using GitHub Pages [without a custom domain](https://github.com/sitek94/vite-deploy-demo?tab=readme-ov-file#fix-assets-links), you'll need to define the repo name as the `base` property [in `vite.config.ts`](https://github.com/jeremyckahn/chitchatter/blob/df6d10868e12ad13036a44f959796f4da35adc28/vite.config.ts#L35-L38). Here's an example of how that might look:
 
 ```js
 const config = () => {
    return defineConfig({
-      base: '/chitchatter/',
+      base: '/ne1up/',
       build: {
       // ...
 }
@@ -229,11 +227,11 @@ Explore the files in `src/config` to modify pairing and relay server configurati
 
 #### Theme customization
 
-Chitchatter utilizes the [MUI component library](https://mui.com/) which is [themeable](https://mui.com/material-ui/customization/theming/). You can customize Chitchatter's look and feel by modifying [the shell theme definition](https://github.com/jeremyckahn/chitchatter/blob/dc78137702bb9d6bf1be289e469e080cd7d5dc8b/src/components/Shell/useShellTheme.ts#L11-L18).
+ne1up utilizes the [MUI component library](https://mui.com/) which is [themeable](https://mui.com/material-ui/customization/theming/). You can customize ne1up's look and feel by modifying [the shell theme definition](https://github.com/jeremyckahn/chitchatter/blob/dc78137702bb9d6bf1be289e469e080cd7d5dc8b/src/components/Shell/useShellTheme.ts#L11-L18).
 
 ### Troubleshooting
 
-If you run into any issues with a custom Chitchatter installation, first ensure that you are using [the latest version of the code](https://github.com/jeremyckahn/chitchatter/tree/main). If you are hosting your installation with GitHub Pages, sync your `main` branch and _not_ your `gh-pages` branch. Updating your `main` branch will trigger a proper rebuild of your `gh-pages` branch.
+If you run into any issues with a custom ne1up installation, first ensure that you are using [the latest version of the code](https://github.com/isne1up/ne1up/tree/main). If you are hosting your installation with GitHub Pages, sync your `main` branch and _not_ your `gh-pages` branch. Updating your `main` branch will trigger a proper rebuild of your `gh-pages` branch.
 
 - <https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/syncing-a-fork>
 
@@ -243,11 +241,11 @@ This could happen for a variety of reasons. The most likely of which is that one
 
 ##### Issues specific to browsers with ad blocking extensions
 
-Some ad blockers (such as uBlock Origin) prevent connections to certain WebTorrent servers. This prevents Chitchatter peers from connecting. To work around this, you can either disable your ad blocker or [self-host your own Chitchatter instance](#self-hosting).
+Some ad blockers (such as uBlock Origin) prevent connections to certain WebTorrent servers. This prevents ne1up peers from connecting. To work around this, you can either disable your ad blocker or [self-host your own Chitchatter instance](#self-hosting).
 
 ##### Issues specific to iOS Safari
 
-Chitchatter works on iOS Safari, but browser-level bugs often prevent peers from rejoining the room when the browser is closed and later reopened (for instance, when switching applications). The suggested workaround for this issue is to refresh the page to rejoin the room.
+ne1up works on iOS Safari, but browser-level bugs often prevent peers from rejoining the room when the browser is closed and later reopened (for instance, when switching applications). The suggested workaround for this issue is to refresh the page to rejoin the room.
 
 ##### Issues specific to Firefox
 
@@ -255,7 +253,7 @@ Per [#36](https://github.com/jeremyckahn/chitchatter/issues/36), check your `abo
 
 #### Offered files can't be downloaded from peers
 
-Chitchatter uses [StreamSaver.js](https://github.com/jimmywarting/StreamSaver.js) to facilitate large file transfers. Download managers such as [FDM](https://www.freedownloadmanager.org/) are [known to interfere with StreamSaver.js](https://github.com/jimmywarting/StreamSaver.js/issues/325), so it is recommended to disable such download managers when trying to receive files.
+ne1up uses [StreamSaver.js](https://github.com/jimmywarting/StreamSaver.js) to facilitate large file transfers. Download managers such as [FDM](https://www.freedownloadmanager.org/) are [known to interfere with StreamSaver.js](https://github.com/jimmywarting/StreamSaver.js/issues/325), so it is recommended to disable such download managers when trying to receive files.
 
 ### Contributors
 
@@ -265,6 +263,6 @@ Chitchatter uses [StreamSaver.js](https://github.com/jimmywarting/StreamSaver.js
 </a>
 </p>
 
-## ⚠️ [Disclaimer](https://chitchatter.im/disclaimer)
+## ⚠️ [Disclaimer](https://ne1up.com/disclaimer)
 
-By using Chitchatter, you agree to accept **full responsibility** for your actions related to its use. Additionally, you agree **not** to hold any contributors to the Chitchatter project responsible for any result of your use of it. The developers of Chitchatter do not endorse illegal activity.
+By using ne1up, you agree to accept **full responsibility** for your actions related to its use. Additionally, you agree **not** to hold any contributors to the Chitchatter project responsible for any result of your use of it. The developers of ne1up do not endorse illegal activity.
