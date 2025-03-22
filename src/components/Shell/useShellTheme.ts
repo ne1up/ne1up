@@ -15,6 +15,11 @@ export const useShellTheme = () => {
         palette: {
           mode: colorMode,
         },
+        palette: {
+    mode: 'light',
+    primary: {
+      main: '#90caf9',
+    },
       }),
     [colorMode]
   )
